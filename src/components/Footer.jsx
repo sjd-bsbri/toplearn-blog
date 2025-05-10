@@ -43,15 +43,6 @@ const Footer = () => {
         <Grid  xs={12} sm={12} md={8} lg={8} sx={{display:isDownSm?"none":"block"}}>
 
           <Box sx={{display:"flex",border:"2px dashed #334d60",p:"11px",borderRadius:"5px"}}>
-          {/* <TextField prefix={ <PhoneAndroid/>} label={<Typography variant="caption">شماره موبایل شما</Typography>} sx={{background:"#FFF", }} size="smal" 
-          InputProps={{
-          startAdornment: (
-            <InputAdornment position="end">
-             
-            </InputAdornment>
-          ),
-        }}
-        /> */}
      <FormControl fullWidth sx={{"& .MuiInputBase-input":{p:isDownlg?"12px 14px":"16.5px 14px"},"& .MuiOutlinedInput-notchedOutline":{borderColor:"transparent",borderWidth:"0",borderRight:"1px solid #edf3f6",},
     
     }}>
@@ -60,7 +51,6 @@ const Footer = () => {
           sx={{background:"#FFF","&.MuiInputBase-root":{fontSize:isDownlg?"13px":"15px",},"&.MuiOutlinedInput-root":{borderRadius:"4px 0 0 4px",}}}
             id="outlined-adornment-amount"
             startAdornment={<InputAdornment position="start"><PhoneAndroid sx={{fontSize:"17px",color:"#d2dbdf"}}/></InputAdornment>}
-            // label={<Typography variant="caption">شماره موبایل شما</Typography>}
             label="شماره موبایل....."
             
           />
@@ -74,27 +64,11 @@ const Footer = () => {
           sx={{background:"#FFF","&.MuiInputBase-root":{fontSize:isDownlg?"13px":"15px",},"&.MuiOutlinedInput-root":{borderRadius:"0"}}}
             id="outlined-adornment-amount2"
             startAdornment={<InputAdornment position="start"><Email sx={{fontSize:"17px",color:"#d2dbdf"}}/></InputAdornment>}
-            // label={<Typography variant="caption">شماره موبایل شما</Typography>}
             label="شماره موبایل.........."
           />
 
           
         </FormControl>
-      
-        {/* <TextField
- fullWidth
- placeholder="شماره موبایل شما"
- InputProps={{ disableUnderline: true,
-  startAdornment: (
-    <InputAdornment position="end">
-    <PhoneAndroid sx={{fontSize:"17px",color:"#d2dbdf"}}/>
-    </InputAdornment>
-  ),
-  
- }}
-sx={{background:"#FFF"}}
-/> */}
-        
             <Button variant="contained"  size="small" sx={{width:isDownXl?"50%":isXl?"35%":isDownlg?"50%":"40px",fontSize:"14px",lineHeight:"14px",wordSpacing:"-2px",backgroundColor:"#6fc341",borderRadius:"0px 4px 4px 0px",":hover":{backgroundColor:"#61b832"}}}>عضویت در خبرنامه</Button>
 
           </Box>
@@ -128,56 +102,6 @@ sx={{background:"#FFF"}}
 
             ))
           }
-
-          {/* <Typography variant="caption" sx={{wordSpacing:"-1px",lineHeight:isDown321?"30px":isDownXs?"35px" :"40px",p:is2560?"5px 60px 5px 25px":isDown321?"5px 12px 5px 10px": isDownXs?"5px 12px 5px 10px":isDownSm?"5px 18px 5px 10px": isDownlg?"5px 10px 5px 10px":"5px 10px 5px 25px",color:"#FFF",fontSize:isDown321?"14px":"13px",transition:"0.5s",":hover":{color:"#00bffe",cursor:"pointer"}}}>
-
-          <Badge variant="dot"  sx={{backgroundColor:"#00bffe",boxShadow:"0 0 5px #00bffe", width:"5px",height:"5px",borderRadius:"100%",right:"8px"}}></Badge>
-
-            مرجع تخصصی برنامه نویسان</Typography>
-            
-          <Typography variant="caption" sx={{wordSpacing:"-1px",lineHeight:isDown321?"30px":isDownXs?"35px" :"40px",p:is2560?"5px 60px 5px 25px":isDown321?"5px 12px 5px 10px":isDownXs?"5px 12px 5px 10px":isDownSm?"5px 18px 5px 10px": isDownlg?"5px 10px 5px 10px":"5px 10px 5px 25px",color:"#FFF",fontSize:isDown321?"14px":"13px",transition:"0.5s",":hover":{color:"#00bffe",cursor:"pointer"}}}>
-          <Badge variant="dot"  sx={{backgroundColor:"#00bffe",boxShadow:"0 0 5px #00bffe", width:"5px",height:"5px",borderRadius:"100%",right:"8px"}}></Badge>
-
-             آموزشگاه برنامه نویسان</Typography>
-          <Typography variant="caption" sx={{wordSpacing:"-1px",lineHeight:isDown321?"30px":isDownXs?"35px" :"40px",p:is2560?"5px 60px 5px 25px":isDown321?"5px 12px 5px 10px":isDownXs?"5px 12px 5px 10px":isDownSm?"5px 18px 5px 10px": isDownlg?"5px 10px 5px 10px":"5px 10px 5px 25px",color:"#FFF",fontSize:isDown321?"14px":"13px",transition:"0.5s",":hover":{color:"#00bffe",cursor:"pointer"}}}>
-
-          <Badge variant="dot"  sx={{backgroundColor:"#00bffe",boxShadow:"0 0 5px #00bffe", width:"5px",height:"5px",borderRadius:"100%",right:"8px"}}></Badge>
-
-
-              قالب رایگان </Typography>
-          <Typography variant="caption" sx={{wordSpacing:"-1px",lineHeight:isDown321?"30px":isDownXs?"35px" :"40px",p:is2560?"5px 60px 5px 25px":isDown321?"5px 12px 5px 10px":isDownXs?"5px 12px 5px 10px": isDownSm?"5px 18px 5px 10px": isDownlg?"5px 10px 5px 10px":"5px 10px 5px 25px",color:"#FFF",fontSize:isDown321?"14px":"13px",transition:"0.5s",":hover":{color:"#00bffe",cursor:"pointer"}}}> 
-                      <Badge variant="dot"  sx={{backgroundColor:"#00bffe",boxShadow:"0 0 5px #00bffe", width:"5px",height:"5px",borderRadius:"100%",right:"8px"}}></Badge>
-
-             سفارش پروژه  </Typography>
-          <Typography variant="caption" sx={{wordSpacing:"-1px",lineHeight:isDown321?"30px":isDownXs?"35px" :"40px",p:is2560?"5px 60px 5px 25px":isDown321?"5px 12px 5px 10px":isDownXs?"5px 12px 5px 10px":isDownSm?"5px 18px 5px 10px": isDownlg?"5px 10px 5px 10px":"5px 10px 5px 25px",color:"#FFF",fontSize:isDown321?"14px":"13px",transition:"0.5s",":hover":{color:"#00bffe",cursor:"pointer"}}}> 
-                      <Badge variant="dot"  sx={{backgroundColor:"#00bffe",boxShadow:"0 0 5px #00bffe", width:"5px",height:"5px",borderRadius:"100%",right:"8px"}}></Badge>
-
-              گت ورک و کسب درآمد </Typography>
-          <Typography variant="caption" sx={{wordSpacing:"-1px",lineHeight:isDown321?"30px":isDownXs?"35px" :"40px",p:is2560?"5px 60px 5px 25px":isDown321?"5px 12px 5px 10px":isDownXs?"5px 12px 5px 10px":isDownSm?"5px 18px 5px 10px": isDownlg?"5px 10px 5px 10px":"5px 10px 5px 25px",color:"#FFF",fontSize:isDown321?"14px":"13px",transition:"0.5s",":hover":{color:"#00bffe",cursor:"pointer"}}}> 
-                      <Badge variant="dot"  sx={{backgroundColor:"#00bffe",boxShadow:"0 0 5px #00bffe", width:"5px",height:"5px",borderRadius:"100%",right:"8px"}}></Badge>
-
-              موتور جستجو </Typography>
-          <Typography variant="caption" sx={{wordSpacing:"-1px",lineHeight:isDown321?"30px":isDownXs?"35px" :"40px",p:is2560?"5px 60px 5px 25px":isDown321?"5px 12px 5px 10px":isDownXs?"5px 12px 5px 10px":isDownSm?"5px 18px 5px 10px": isDownlg?"5px 10px 5px 10px":"5px 10px 5px 25px",color:"#FFF",fontSize:isDown321?"14px":"13px",transition:"0.5s",":hover":{color:"#00bffe",cursor:"pointer"}}}> 
-                      <Badge variant="dot"  sx={{backgroundColor:"#00bffe",boxShadow:"0 0 5px #00bffe", width:"5px",height:"5px",borderRadius:"100%",right:"8px"}}></Badge>
-
-              لرن بای </Typography>
-          <Typography variant="caption" sx={{wordSpacing:"-1px",lineHeight:isDownXs?"35px" :"40px",p:is2560?"5px 60px 5px 25px":isDown321?"5px 12px 5px 10px":isDownXs?"5px 12px 5px 10px":isDownSm?"5px 18px 5px 10px": isDownlg?"5px 10px 5px 10px":"5px 10px 5px 25px",color:"#FFF",fontSize:isDown321?"14px":"13px",transition:"0.5s",":hover":{color:"#00bffe",cursor:"pointer"}}}> 
-                      <Badge variant="dot"  sx={{backgroundColor:"#00bffe",boxShadow:"0 0 5px #00bffe", width:"5px",height:"5px",borderRadius:"100%",right:"8px"}}></Badge>
-
-              قوانین سایت </Typography>
-          <Typography variant="caption" sx={{wordSpacing:"-1px",lineHeight:isDown321?"30px":isDownXs?"35px" :"40px",p:is2560?"5px 60px 5px 25px":isDown321?"5px 12px 5px 10px":isDownXs?"5px 12px 5px 10px":isDownSm?"5px 18px 5px 10px": isDownlg?"5px 10px 5px 10px":"5px 10px 5px 25px",color:"#FFF",fontSize:isDown321?"14px":"13px",transition:"0.5s",":hover":{color:"#00bffe",cursor:"pointer"}}}> 
-                      <Badge variant="dot"  sx={{backgroundColor:"#00bffe",boxShadow:"0 0 5px #00bffe", width:"5px",height:"5px",borderRadius:"100%",right:"8px"}}></Badge>
-
-              درباره ما </Typography>
-          <Typography variant="caption" sx={{wordSpacing:"-1px",lineHeight:isDown321?"30px":isDownXs?"35px" :"40px",p:is2560?"5px 60px 5px 25px":isDown321?"5px 12px 5px 10px":isDownXs?"5px 12px 5px 10px":isDownSm?"5px 18px 5px 10px": isDownlg?"5px 10px 5px 10px":"5px 10px 5px 25px",color:"#FFF",fontSize:isDown321?"14px":"13px",transition:"0.5s",":hover":{color:"#00bffe",cursor:"pointer"}}}> 
-                      <Badge variant="dot"  sx={{backgroundColor:"#00bffe",boxShadow:"0 0 5px #00bffe", width:"5px",height:"5px",borderRadius:"100%",right:"8px"}}></Badge>
-
-              سوالات متداول </Typography>
-          <Typography variant="caption" sx={{wordSpacing:"-1px",lineHeight:isDown321?"30px":"40px",p:is2560?"5px 60px 5px 25px":isDown321?"5px 12px 5px 10px":isDownXs?"5px 12px 5px 10px":isDownSm?"5px 18px 5px 10px": isDownlg?"5px 10px 5px 10px":"5px 10px 5px 25px",color:"#FFF",fontSize:isDown321?"14px":"13px",transition:"0.5s",":hover":{color:"#00bffe",cursor:"pointer"}}}> 
-                      <Badge variant="dot"  sx={{backgroundColor:"#00bffe",boxShadow:"0 0 5px #00bffe", width:"5px",height:"5px",borderRadius:"100%",right:"8px"}}></Badge>
-
-              فاماسرور </Typography> */}
-
         </Box> 
         </Grid>
         <Grid  xs={12} sm={12} md={2} lg={2} >
@@ -192,18 +116,7 @@ sx={{background:"#FFF"}}
 
             </IconButton>
           </Box>
-        </Grid>
-
-
-
-
-
-
-
-
-
-
-       
+        </Grid>       
       </Grid>
     </Box>
     <Box sx={{p:isDownSm?"0 15px":0}}>

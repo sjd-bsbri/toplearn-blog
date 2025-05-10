@@ -16,32 +16,9 @@ import goldVip  from "../assets/goldVip.png";
 
 import { Search, PersonOutline,KeyboardArrowDown } from "@mui/icons-material";
 
-import React from "react";
+import React, { useState } from "react";
 import { useTheme } from "@emotion/react";
-// const Linkheader = styled(Link)`
-//   position: relative;
-//   display: inline-block;
-  
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     top: -15px;
-//     right: 0;
-//     width: 100%;
-//     height: 2px;
-//     background-color: #00bffe;
-//     transform: scaleX(0);
-//     transform-origin: left;
-//     transition: transform 0.3s ease-in-out;
-//     box-shadow:0 0 7px #00bffe;
-//     border-radius:"25px"
-//   }
-
-//   &:hover::before {
-//     transform: scaleX(1);
-//     transform-origin: left;
-//   }
-// `;
+import GoogleAuth from "./GoogleAuth";
 const Linkunderheader = styled(Link)({
   pt:"15px",textDecoration:"none",color:"#1e2f38",fontFamily:"vazir",letterSpacing:"-.5px",cursor:"pointer",transition:"all 0.2s linear 0s",":hover":{color:"#00b3e9"}
 });
@@ -71,7 +48,7 @@ const Header = () => {
   const isDownMd = useMediaQuery(theme.breakpoints.down('md'));
   const isDownSm = useMediaQuery(theme.breakpoints.down('sm'));
 
-
+ 
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handlePopoverOpen = (event) => {
@@ -87,12 +64,10 @@ const Header = () => {
     <>
     
     <Box
-    // disableGutters
-    //   position="static"
+   
       sx={{
         background: `url(${headerImage}) no-repeat center center `,
-        // backgroundRepeat: "no-repeat",
-        // backgroundPosition: "center",
+        
         backgroundSize: "cover",
         height: isDownMd ? "74px" :isDownlg ? "100px" :"84px" ,
         boxShadow:"none",
@@ -103,12 +78,9 @@ const Header = () => {
       }}
     >
       <Box  
-      // disableGutters 
       sx={{ 
-        // m:isDownXl ? '10px 105px 0 105px': isXl ?  "10px auto" : isDownlg ? "0px " :'10px 105px 0 105px',
         display:isDownlg ? "block" : "flex",justifyContent:"space-evenly",alignItems:"center",
         py:"15px",
-        // px:"50px",
         px:isDownlg?"15px" : null,
         mx:isDownlg?"27px" : null,
         
@@ -125,15 +97,23 @@ const Header = () => {
       />
        
       <Button disableRipple sx={{display:isDownMd?"none":"block"}} >
-        {pages.map((page) => (
-          <Link id="linkHeader" sx={{  fontSize: "13.5px",
-            color: "#fff",mx: "11px",":hover":{textDecoration:"none"}}} key={page}>
-            {page}
-            
-          </Link>
-          
-          
-        ))}
+        {pages.map((page) => {
+         
+          return (
+            <Link 
+              id="linkHeader" 
+              sx={{  
+                fontSize: "13.5px",
+                color: "#fff",
+                mx: "11px",
+                ":hover":{textDecoration:"none"}
+              }} 
+              key={page}
+            >
+              {page}
+            </Link>
+          );
+        })}
       </Button>
         </Box>
         
@@ -148,11 +128,7 @@ const Header = () => {
             top:isDownMd?20:null,
             px:isDownlg?"15px" : null,
             mx:isDownlg?"27px" : null,
-            // justifyContent: "center",
-            // pl: "180px",
-            // pl:isDownXl ? "80px" :'180px',
-
-            // transform:"translateX(85px)"
+            
              }}
         >
           <Search
@@ -172,33 +148,15 @@ const Header = () => {
               borderStyle: "inset",
             }}
           />
-          <PersonOutline sx={{ fontSize: "21px", pr: "5px" }} />
-          <Typography
-            sx={{
-              fontSize: "14px",
-              cursor: "pointer",
-              ":hover": { color: "#00b3e9", transition: "all ease-in-out .5s" },
-            }}
-          >
-            ورود{" "}
-          </Typography>
-          <Typography sx={{ height: "25px" }}>/</Typography>
-          <Typography
-            sx={{
-              fontSize: "14px",
-              cursor: "pointer",
-              ":hover": { color: "#00b3e9", transition: "all ease-in-out .5s" },
-            }}
-          >
-            ثبت نام{" "}
-          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <GoogleAuth />
+          </Box>
         </Box>
       </Box>
     </Box>
     <Box 
     
     sx={{
-      // p:"20px 90px 20px 115px",
        boxShadow:"10px 0px 0px #ebf0f5", borderBottom:"1px solid #eef4f9",
         display:isDownMd?"none":"block"
       
@@ -207,18 +165,9 @@ const Header = () => {
        m:is2560?"0 180px":isDownXl ? '0px 0px 0 0px': isXl ?  "0px 65px" : '0px 105px 0 105px',
 
     
-      // p:"20px 90px 20px 115px",
-      
-      //   [theme.breakpoints.up("xl")]: {
-        
-      //     m: "10px 700px 10px 700px",
-        
-        
-      // },
-
+     
       }}>
         <Box sx={{display:"flex",
-          // transform:isXl?"translateX(-55px)":"translateX(0px)"
         }}
           >
         <Linkunderheader  id="basic-button"
@@ -228,7 +177,6 @@ const Header = () => {
                onMouseLeave={handlePopoverClose}
                sx={{display:"flex",alignItems:"center",
                 p:isDownlg? "30px 10px 30px 0" :"30px 30px 30px 0",
-                // fontSize:"15px",
                 fontSize:isDownlg? "14px":"15px",
               }}
               >
@@ -262,15 +210,7 @@ const Header = () => {
         <Typography sx={{ p: 1 }}>I use Popover.</Typography>
         <Typography sx={{ p: 1 }}>I use Popover.</Typography>
       </Popover>
-          {/* <Linkunderheader sx={{p:isDownlg? "30px 15px 30px 0" :"30px 30px 30px 0",fontSize:isDownlg? "14px":"15px"}}  >
-          آموزش برنامه نویسی به کودکان
-          </Linkunderheader>
-          <Linkunderheader sx={{p:isDownlg? "30px 15px 30px 0" :"30px 30px 30px 0",fontSize:isDownlg? "14px":"15px"}} >
-          آموزش ورود به دنیای برنامه نویسی
-          </Linkunderheader>
-          <Linkunderheader sx={{p:isDownlg? "30px 15px 30px 0" :"30px 30px 30px 0",fontSize:isDownlg? "14px":"15px"}} >
-          دوره های مخصوص ناشنوایان
-          </Linkunderheader> */}
+         
           {
             linkCourses.map((course,index)=>(
               <>

@@ -23,7 +23,6 @@ const MainLayout = ({children}) => {
             <title>بلاگ تاپ لرن  </title>
           </Helmet>
           <Header/>
-          {/* Grid System */}
           {children}
           <Footer/>
         </HelmetProvider>
