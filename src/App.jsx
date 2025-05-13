@@ -1,6 +1,7 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
 import Main from "./components/MainSite";
 import MainLayout from "./layouts/MainLayout";
+import { AuthProvider } from "./contexts/AuthContext";
 
 const App = () => {
   const [showDemo, setShowDemo] = useState(false);
@@ -61,9 +62,11 @@ const App = () => {
   };
 
   return (
-    <MainLayout>
-      {renderContent()}
-    </MainLayout>
+    <AuthProvider>
+      <MainLayout>
+        {renderContent()}
+      </MainLayout>
+    </AuthProvider>
   );
 };
 
